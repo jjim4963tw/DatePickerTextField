@@ -1,11 +1,10 @@
 # DatePickerTextField
 
+shows a TextField associated with a DatePicker
+
 # Screenshot
 
-![screen1](./Screenshot/Simulator1.png) 
-
-![screen1](./Screenshot/Simulator2.png)
-
+<img src="./Screenshot/Simulator1.png" alt="Simulator1" width="250"/> <img src="./Screenshot/Simulator2.png" alt="Simulator1" width="250"/>
 
 # How to Used
 
