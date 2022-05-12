@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel: ViewModel
+
+    init() {
+        _viewModel = StateObject(wrappedValue: ViewModel())
+    }
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Form {
+                Section("Date") {
+                    DatePickerTextField(placeholder: "input date", date: self.$viewModel.selectedData)
+                }
+            }
+        }
+    }
+}
+
+extension ContentView {
+    @MainActor class ViewModel: ObservableObject {
+        @Published var selectedData: Date? = Date()
     }
 }
 
