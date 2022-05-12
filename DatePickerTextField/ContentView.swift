@@ -18,7 +18,7 @@ struct ContentView: View {
         VStack {
             Form {
                 Section("Date") {
-                    DatePickerTextField(placeholder: "input date", date: self.$viewModel.selectedData)
+                    DatePickerTextField(placeholder: "input date", pickerType: .inline, date: self.$viewModel.selectedData)
                 }
             }
         }

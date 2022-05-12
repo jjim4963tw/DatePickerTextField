@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DatePickerTextField: UIViewRepresentable {
     public var placeholder: String
+    public var pickerType: UIDatePickerStyle
     
     @Binding public var date: Date?
 
@@ -22,7 +23,7 @@ struct DatePickerTextField: UIViewRepresentable {
 
     func makeUIView(context: UIViewRepresentableContext<DatePickerTextField>) -> UITextField {
         datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .inline
+        datePicker.preferredDatePickerStyle = pickerType
         datePicker.frame = CGRect(x: 0, y: 36 + 50, width: UIScreen.main.bounds.size.width, height: 420)
         datePicker.addTarget(context.coordinator, action: #selector(context.coordinator.dateValueChanged), for: .valueChanged)
         
